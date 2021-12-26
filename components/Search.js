@@ -27,25 +27,24 @@ const Search = (props) => {
 
 const styles = StyleSheet.create({
   view: {
-    top: 9,
+    top: 16,
     flexDirection: "row",
     marginBottom: 18,
-    marginHorizontal: 16,
+    marginHorizontal: 20,
     paddingHorizontal: 7,
-    backgroundColor: "rgb(232,235,235)",
-    borderRightWidth: 4,
-    borderColor: "#222",
-    height: 55,
-    borderRadius: 4
+    backgroundColor: "#eaeaea",
+    borderBottomWidth: 2,
+    borderColor: "#444",
+    height: 50,
+    borderRadius: 5
   },
   input: {
     borderRadius: 7,
     color: "#333",
     fontSize: 20,
-    fontFamily: "regular",
-    fontWeight: "800",
+    fontWeight: "300",
     flex: 1,
-    marginTop: 12,
+    marginTop: 6,
     paddingBottom: 9,
   },
   icon: {

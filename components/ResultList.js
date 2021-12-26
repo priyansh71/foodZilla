@@ -6,23 +6,27 @@ import { withNavigation } from "react-navigation";
 
 // This function can help ResultList take the navigation prop directly without ever using the prop from the home screen component.
 const ResultList = ({ header, results, navigation }) => {
+
+  if(!results.length){
+    return null
+  }
   return (
     <View>
       <Text style={styles.title}>{header}</Text>
       <FlatList
         horizontal={true}
         data={results}
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate("ResultShowScreen", { id : item.id})}
+              onPress={() => navigation.navigate("Restaurant", { id : item.id})}
             >
               <ResultDetail result={item} />
             </TouchableOpacity>
           );
         }}
-        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
@@ -31,9 +35,10 @@ const ResultList = ({ header, results, navigation }) => {
 const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 26,
+    fontFamily : 'shizuru',
     marginHorizontal: 16,
-    marginVertical: 5,
+    marginVertical: 2,
   },
 });
 

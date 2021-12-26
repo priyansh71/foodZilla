@@ -15,7 +15,7 @@ const ResultDetail = ({result}) => {
         <Text style={styles.name}>
             {result.name}
         </Text>
-        <Text>
+        <Text style={styles.rating}>
             {result.rating} Stars , {result.review_count} reviews.
         </Text>
     </View>
@@ -32,13 +32,20 @@ const styles = StyleSheet.create({
     },
     image :{
         width : 250,
-        height : 130,
+        height : 160,
         borderRadius : 5
     },
     name : {
-        paddingTop : 14,
-        fontSize : 15,
-        fontWeight : "600"
+        paddingTop : 12,
+        paddingBottom : 5,
+        fontSize : 18,
+        fontWeight : "900",
+        fontFamily : "nunito",
+    },
+    rating : {
+        fontFamily : "nunito",
+        letterSpacing : -0.2,
+        fontSize : 16
     }
 });
 
