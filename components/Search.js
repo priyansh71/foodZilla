@@ -1,5 +1,3 @@
-/** @format */
-
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { View, StyleSheet, TextInput } from "react-native";
@@ -30,19 +28,17 @@ const Search = (props) => {
 const styles = StyleSheet.create({
   view: {
     top: 9,
-    margin: 10,
     flexDirection: "row",
-    marginVertical: 10,
-    marginHorizontal: 20,
+    marginBottom: 18,
+    marginHorizontal: 16,
     paddingHorizontal: 7,
     backgroundColor: "rgb(232,235,235)",
-    borderBottomWidth: 2,
+    borderRightWidth: 4,
     borderColor: "#222",
     height: 55,
-    borderRadius: 7,
+    borderRadius: 4
   },
   input: {
-    marginHorizontal: 12,
     borderRadius: 7,
     color: "#333",
     fontSize: 20,
@@ -50,7 +46,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     flex: 1,
     marginTop: 12,
-    paddingBottom: 7,
+    paddingBottom: 9,
   },
   icon: {
     marginBottom: 7,
