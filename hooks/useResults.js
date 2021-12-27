@@ -5,13 +5,13 @@ const useResults = () => {
   const [results, setResults] = useState([]);
   const [error, setError] = useState("");
 
-  const handleResults = async (searchTerm) => {
+  const handleResults = async (searchTerm, searchLocation) => {
     try {
       const response = await yelp.get("/search", {
         params: {
           limit: 50,
           term: searchTerm,
-          location: "Chicago",
+          location: searchLocation
         },
       });
       setResults(response.data.businesses);
@@ -20,9 +20,9 @@ const useResults = () => {
     }
   };
 
-  useEffect(() => {
-    handleResults("pasta");
-  }, []);
+  // useEffect(() => {
+  //   handleResults("Pizza", "San Jose");
+  // }, []);
 
   return [handleResults, error, results];
 };

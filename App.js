@@ -7,7 +7,9 @@ const App = () => {
     let [fontsLoaded] = useFonts({
         ubuntu : require("./assets/fonts/ubuntu.ttf"),
         nunito: require("./assets/fonts/nunito.ttf"),
-        shizuru : require("./assets/fonts/Shizuru-Regular.ttf")
+        shizuru : require("./assets/fonts/Shizuru-Regular.ttf"),
+        headerBold : require("./assets/fonts/TheNautigal-Bold.ttf"),
+        headerNormal : require("./assets/fonts/TheNautigal-Regular.ttf")
     });
 
       if (!fontsLoaded) {

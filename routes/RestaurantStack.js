@@ -1,10 +1,14 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import HomeScreen from "../screens/HomeScreen";
+import HomeScreen from "../screens/SearchScreen";
 import ResultShowScreen from "../screens/ResultShowScreen";
+import LocationScreen from "../screens/LocationScreen";
 
 const screens = {
-  foodZilla : {
+  LocationScreen : {
+    screen : LocationScreen
+  },
+  Restaurants : {
     screen : HomeScreen
   },
   Restaurant : {
@@ -14,8 +18,8 @@ const screens = {
 
 const RestaurantStack = createStackNavigator(screens,{
     defaultNavigationOptions : {
-        headerTintColor: '#444',
-        headerStyle: { backgroundColor: '#eee', height: 100 },
+        headerTintColor: '#111',
+        headerStyle: { backgroundColor: '#eee', height: 80 }
   }
 });
 

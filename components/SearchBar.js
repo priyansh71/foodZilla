@@ -2,7 +2,7 @@ import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { View, StyleSheet, TextInput } from "react-native";
 
-const Search = (props) => {
+const SearchBar = (props) => {
   return (
     <View style={styles.view}>
       <AntDesign 
@@ -13,7 +13,7 @@ const Search = (props) => {
    />
       <TextInput
         style={styles.input}
-        placeholder="Type Here.."
+        placeholder={props.placeHolder}
         selectionColor="black"
         autoCapitalize="none"
         autoCorrect={false}
@@ -27,22 +27,23 @@ const Search = (props) => {
 
 const styles = StyleSheet.create({
   view: {
-    top: 16,
+    top: 20,
     flexDirection: "row",
     marginBottom: 18,
-    marginHorizontal: 20,
+    marginHorizontal: 25,
     paddingHorizontal: 7,
-    backgroundColor: "#eaeaea",
-    borderBottomWidth: 2,
+    backgroundColor: "transparent",
+    borderWidth: 0.5,
+    backgroundColor : '#ededed',
     borderColor: "#444",
-    height: 50,
+    height: 55,
     borderRadius: 5
   },
   input: {
     borderRadius: 7,
     color: "#333",
     fontSize: 20,
-    fontWeight: "300",
+    fontWeight: "200",
     flex: 1,
     marginTop: 6,
     paddingBottom: 9,
@@ -54,4 +55,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Search;
+export default SearchBar;

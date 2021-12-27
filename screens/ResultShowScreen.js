@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View ,Text, FlatList, Image } from 'react-native';
-import { WebView } from 'react-native-webview';
 import yelp from '../apis/yelp';
 
 
